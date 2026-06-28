@@ -33,11 +33,14 @@ with st.spinner("Loading model..."):
         st.stop()
 
 st.success("Model loaded successfully.")
+def clear_form():
+    st.session_state.email = ""
 
 email_text = st.text_area(
     "Paste the customer email here",
     height=220,
     placeholder="Write or paste the email message...",
+    key="email",
 )
 
 col1, col2 = st.columns([1, 1])
@@ -46,10 +49,7 @@ with col1:
     predict_clicked = st.button("Predict", type="primary")
 
 with col2:
-    clear_clicked = st.button("Clear")
-
-if clear_clicked:
-    st.rerun()
+    clear_clicked = st.button("Clear", on_click=clear_form)
 
 if predict_clicked:
     try:
