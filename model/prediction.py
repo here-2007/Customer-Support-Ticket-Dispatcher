@@ -40,8 +40,8 @@ def get_model():
 def predict_output(email:list):
 	global id_to_team
 
-	model = get_model()
-	prediction = model.predict(email)
+	loaded_model = get_model()
+	prediction = loaded_model.predict(email)
 
 	team_probs = tf.nn.softmax(prediction[0][0], axis=-1).numpy()
 	predicted_class = np.argmax(team_probs)
