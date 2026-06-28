@@ -1,9 +1,9 @@
 # Core ML
+setuptools>=65
 tensorflow==2.20.0
 tf-keras==2.20.1
 tensorflow-hub==0.16.1
 tensorflow-text==2.20.1
-setuptools>=65
 
 # Data Processing
 pandas==2.3.3
