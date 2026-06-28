@@ -49,7 +49,8 @@ def predict_output(email:list):
 	confidence = team_probs[predicted_class]
 
 	urgency_score = prediction[1][0][0]
-
+	if (urgency_score<0):
+		urgency_score=0
 	return {
 		'predicted_team' : predicted_team,
 		'confidence' : round(float(confidence), 3),
