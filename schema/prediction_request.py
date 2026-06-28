@@ -1,5 +1,8 @@
-from pydantic import BaseModel
+from pydantic import BaseModel, Field
 
 
 class PredictionRequest(BaseModel):
-    email: str
+    email: str = Field(
+        ...,
+        description="Email Content of Customer support ticket",
+    )

@@ -24,9 +24,11 @@ class PredictionResponse(BaseModel):
             "examples": [
                 {
                     "predicted_team": "Billing",
+
                     "confidence": 0.8432,
+                    
                     "urgency_score": 0.9354,
                 }
             ]
         }
-    }
+    }
